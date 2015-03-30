@@ -14,7 +14,7 @@ RUN chmod +x /usr/lib/cgi-bin/*.py
 RUN chown www-data:www-data /usr/lib/cgi-bin/*.py
 
 
-ADD /start.sh /start.sh
+ADD start.sh /start.sh
 RUN chmod +x /start.sh
 
 ENTRYPOINT ["/start.sh"]
