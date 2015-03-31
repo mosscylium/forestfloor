@@ -20,3 +20,7 @@ RUN chmod +x /start.sh
 ENTRYPOINT ["/start.sh"]
 
 EXPOSE 80
+
+#COPY EXAMPLE DB INTO PLACE
+RUN cp /assets/templog.db /var/www/
+RUN chown www-data:www-data /var/www/templog.db
