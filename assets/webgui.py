@@ -248,11 +248,11 @@ def main():
     print "<html>"
     # print the head section including the table
     # used by the javascript for the chart
-    printHTMLHead("Raspberry Pi Temperature Logger", table)
+    printHTMLHead("ForestFloor", table)
 
     # print the page body
     print "<body>"
-    print "<h1>Raspberry Pi Temperature Logger</h1>"
+    print "<h1>ForestFloor Moss Controller</h1>"
     print "<hr>"
     print_time_selector(option)
     show_graph()
