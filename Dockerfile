@@ -11,7 +11,9 @@ RUN mkdir -p /usr/lib/cgi-bin && \
   mv /assets/*.py /usr/lib/cgi-bin/ && \
   chmod +x /usr/lib/cgi-bin/*.py && \
   chown www-data:www-data /usr/lib/cgi-bin/*.py && \
-  mv /assets/apache.conf /etc/apache2/sites-enabled/000-default.conf
+  mv /assets/apache.conf /etc/apache2/sites-enabled/000-default.conf && \
+  a2enmod cgi && \
+  service apache2 reload
 
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
